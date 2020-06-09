@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.polytech.client">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Accounting Automation"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoginActivity"
+            android:windowSoftInputMode="adjustResize|stateVisible">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:label="Menu"
+        />
+        <activity
+            android:name=".EmployeeActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:label="Employees"
+        />
+        <activity
+            android:name=".DepartmentActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:label="Departments"
+        />
+        <activity
+            android:name=".ProjectActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:label="Projects"
+        />
+        <activity
+            android:name=".DepartmentsEmployeesActivity"
+            android:label="Departments and Employees"
+            android:windowSoftInputMode="adjustPan"
+        />
+    </application>
+
+</manifest>

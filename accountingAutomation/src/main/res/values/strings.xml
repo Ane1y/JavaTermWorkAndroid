@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">ClientJavaTerm</string>
+
+    <string-array name="EmployeeFind">
+        <item>All</item>
+        <item>By Id</item>
+        <item>By Name</item>
+    </string-array>
+
+    <string-array name="DepartmentFind">
+        <item>All</item>
+        <item>By Id</item>
+        <item>By Name</item>
+    </string-array>
+
+    <string-array name="ProjectFind">
+        <item>All</item>
+        <item>By Id</item>
+        <item>By Name</item>
+        <item>By Department Name</item>
+        <item>By Department Id</item>
+    </string-array>
+
+    <string-array name="DEFind">
+        <item>All</item>
+        <item>By Employee Id</item>
+        <item>By Employee Name</item>
+        <item>By Department Name</item>
+        <item>By Department Id</item>
+    </string-array>
+</resources>

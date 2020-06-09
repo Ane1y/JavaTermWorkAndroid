@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:layout_gravity="center"
+
+                                                   android:isScrollContainer="true"
+                                                   tools:context=".EmployeeActivity">
+
+    <Button
+            android:id="@+id/BEmployeeNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="next"
+            app:layout_constraintEnd_toStartOf="@+id/BEmployeeClear"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2"/>
+
+    <TextView
+            android:id="@+id/TVEmployeePages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toStartOf="@+id/BEmployeeNext"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/BEmployeePrev"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2"/>
+
+    <Button
+            android:id="@+id/BEmployeePrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:text="prev"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2"/>
+
+
+    <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="358dp"
+            android:layout_height="279dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fadeScrollbars="false"
+            android:fillViewport="false"
+            android:isScrollContainer="true"
+            android:overScrollMode="never"
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbarThumbVertical="@android:color/holo_red_dark"
+            android:scrollbars="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Id"/>
+
+                <EditText
+                        android:id="@+id/ETEmployeeId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:singleLine="true"/>
+
+            </TableRow>
+
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp">
+
+                <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Last Name"/>
+
+                <EditText
+                        android:id="@+id/ETEmployeeLastName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:singleLine="true"/>
+
+            </TableRow>
+
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp">
+
+                <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="First Name"/>
+
+                <EditText
+                        android:id="@+id/ETEmployeeFirstName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:singleLine="true"/>
+
+            </TableRow>
+
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp">
+
+                <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Pather Name"/>
+
+                <EditText
+                        android:id="@+id/ETEmployeePatherName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:singleLine="true"/>
+
+            </TableRow>
+
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp">
+
+                <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Position"/>
+
+                <EditText
+                        android:id="@+id/ETEmployeePosition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:singleLine="true"/>
+            </TableRow>
+
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp">
+
+                <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+
+                        android:text="Salary"/>
+
+                <EditText
+                        android:id="@+id/ETEmployeeSalary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:singleLine="true"/>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <Spinner
+            android:id="@+id/SpEmployeeSpinner"
+            android:layout_width="136dp"
+            android:layout_height="43dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="80dp"
+            android:entries="@array/EmployeeFind"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+            android:id="@+id/BEmployeeClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="26dp"
+            android:text="Clear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2"/>
+
+    <Button
+            android:id="@+id/BEmployeeAdd"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="28dp"
+            android:text="Add"
+            app:layout_constraintBottom_toTopOf="@+id/SpEmployeeSpinner"
+            app:layout_constraintStart_toEndOf="@+id/BEmployeeUpdate" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/BEmployeeNext"/>
+
+    <Button
+            android:id="@+id/BEmployeeUpdate"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="28dp"
+            android:text="Update"
+            app:layout_constraintBottom_toTopOf="@+id/SpEmployeeSpinner"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/BEmployeePrev"/>
+
+    <Button
+            android:id="@+id/BEmployeeDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:text="Delete"
+            app:layout_constraintBottom_toTopOf="@+id/SpEmployeeSpinner"
+            app:layout_constraintStart_toEndOf="@+id/BEmployeeAdd" app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/BEmployeeClear"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+
+    <ScrollView
+            android:layout_width="159dp"
+            android:layout_height="136dp"
+            android:fadeScrollbars="false"
+            android:fillViewport="false"
+            android:isScrollContainer="true"
+            android:overScrollMode="never"
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbarThumbVertical="@android:color/holo_red_dark"
+            android:scrollbars="vertical"
+            android:id="@+id/scrollView3"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toStartOf="@+id/SpEmployeeSpinner" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginBottom="36dp"
+            android:layout_marginLeft="24dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <EditText
+                    android:id="@+id/ETEmployeeFindLastNameOrId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"/>
+
+            <EditText
+                    android:id="@+id/ETEmployeeFindFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="first name"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:visibility="gone"
+                    tools:visibility="gone"/>
+
+            <EditText
+                    android:id="@+id/ETEmployeeFindPatherName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="pather name"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:visibility="gone"
+                    tools:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+            android:id="@+id/BEmployeeFind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find"
+            android:layout_marginTop="56dp" app:layout_constraintTop_toBottomOf="@+id/SpEmployeeSpinner"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="44dp"
+            app:layout_constraintVertical_bias="0.875"/>
+
+    <TextView
+            android:text="Find by:"
+            android:layout_width="125dp"
+            android:layout_height="27dp"
+            android:id="@+id/textView"
+            app:layout_constraintBottom_toTopOf="@+id/SpEmployeeSpinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="44dp"
+            app:layout_constraintStart_toEndOf="@+id/scrollView3"
+            android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="1.0"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

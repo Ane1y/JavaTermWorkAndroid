@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".MainActivity">
+
+    <Button
+            android:id="@+id/BEmployees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="30dp"
+            android:text="Employees"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/BDepartments"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            android:layout_marginTop="100dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+            android:id="@+id/BDepartments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Departments"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/BProjects"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+            android:id="@+id/BProjects"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Projects"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/BDepartmentsEmployees"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+            android:id="@+id/BDepartmentsEmployees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="120dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Employees and Departments"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/BLogOut"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.6"/>
+
+    <Button
+            android:id="@+id/BLogOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LogOut"
+            android:textSize="18sp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="56dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                                android:id="@+id/guideline" app:layout_constraintGuide_begin="20dp"
+                                                android:orientation="vertical"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="162dp"
+            android:layout_height="38dp"
+            android:id="@+id/userRole"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="72dp" app:layout_constraintEnd_toStartOf="@+id/BLogOut"
+            android:layout_marginEnd="8dp" android:layout_marginBottom="28dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.428"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
