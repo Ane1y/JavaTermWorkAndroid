@@ -415,7 +415,6 @@ public class ProjectActivity extends AppCompatActivity {
 
         String text = ETFindNameOrId.getText().toString();
         String url = "";
-        System.out.println("spinner item: " + spinnerItem);
         switch (spinnerItem) {
             case 0: {
                 url = "projects/all";
@@ -566,7 +565,7 @@ public class ProjectActivity extends AppCompatActivity {
 
                         @Override
                         public void onFail(String message, int code) {
-                            handlerForBadRequest(code, "projects"); //adding failed
+                            handlerForBadRequest(code, "projects");
                         }
                     };
 
@@ -584,7 +583,7 @@ public class ProjectActivity extends AppCompatActivity {
 
             @Override
             public void onFail(String message, int code) {
-                //handlerForBadRequest(code, "departments"); //Adding failed
+                handlerForBadRequest(code, "departments");
             }
         };
 
@@ -618,7 +617,7 @@ public class ProjectActivity extends AppCompatActivity {
 
             @Override
             public void onFail(String message, int code) {
-                handlerForBadRequest(code, "projects"); //Updating failed
+                handlerForBadRequest(code, "projects");
             }
         };
 
@@ -678,10 +677,6 @@ public class ProjectActivity extends AppCompatActivity {
                 mess = "Your token is expired!";
                 break;
             }
-            /*case HttpURLConnection.HTTP_BAD_METHOD: {
-                mess = "You can't delete employee!";
-                break;
-            }*/
             default:
                 mess = "Connection failed or token is expired!";
         }

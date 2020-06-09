@@ -52,7 +52,8 @@
             android:scrollbarThumbVertical="@android:color/holo_red_dark"
             android:scrollbars="vertical"
             tools:layout_editor_absoluteX="45dp"
-            tools:layout_editor_absoluteY="32dp">
+            tools:layout_editor_absoluteY="32dp"
+            tools:ignore="MissingConstraints">
 
         <TableLayout
                 android:layout_width="match_parent"

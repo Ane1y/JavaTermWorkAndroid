@@ -65,7 +65,7 @@ public class EmployeeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         final Bundle arguments = getIntent().getExtras();
         if (arguments != null) {
-            System.out.println("null!");
+            System.out.println("null arguments");
             token = arguments.getString("token");
             urlString = arguments.getString("url");
             rolesList = arguments.getStringArrayList("roles");
@@ -120,13 +120,6 @@ public class EmployeeActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent,
                                        View itemSelected, int selectedItemPosition, long selectedId) {
                 switch (selectedItemPosition) {
-                 /*   case 0: {
-                        ETFindLastNameOrId.setVisibility(View.GONE);
-                        ETFindFirstName.setVisibility(View.GONE);
-                        ETFindPatherName.setVisibility(View.GONE);
-                        spinnerItem = 0;
-                        break;
-                    }*/
                     case 0: {
                         ETFindLastNameOrId.setVisibility(View.GONE);
                         ETFindFirstName.setVisibility(View.GONE);

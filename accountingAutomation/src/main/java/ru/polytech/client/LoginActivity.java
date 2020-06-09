@@ -109,21 +109,21 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void ifFailure(int code) {
-        final String msg;
+        final String message;
         switch (code) {
             case HttpURLConnection.HTTP_BAD_REQUEST: {
-                msg = "User with this name already exist!";
+                message = "User with this name already exist!";
                 break;
             }
             default: {
-                msg = "Invalid username or password!";
+                message = "Invalid username or password!";
             }
         }
 
         runOnUiThread(new Runnable() {
             public void run() {
                 final Toast toast = Toast.makeText(getApplicationContext(),
-                        msg,  Toast.LENGTH_LONG);
+                        message,  Toast.LENGTH_LONG);
                 toast.show();
                 findViewById(R.id.loadingPanel).setVisibility(View.GONE);
             }

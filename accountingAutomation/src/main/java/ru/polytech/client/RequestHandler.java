@@ -68,7 +68,7 @@ public class RequestHandler {
                     int code = connection.getResponseCode();
                     if (code != 200 && code != 201) {
                         System.err.println("connection failed");
-                        System.out.println("code: " + code);
+                        System.err.println("code: " + code);
                         callBack.onFail("error", code);
                     } else {
                         BufferedReader br = new BufferedReader(

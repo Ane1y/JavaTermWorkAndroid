@@ -89,8 +89,7 @@ public class DepartmentActivity extends AppCompatActivity {
         BFind = findViewById(R.id.BDEFind);
         ETFindNameOrId = findViewById(R.id.ETDEFindLastNameOrId);
         spinner = findViewById(R.id.SpDESpinner);
-        ArrayAdapter<?> adapter =
-                ArrayAdapter.createFromResource(this, R.array.DepartmentFind, android.R.layout.simple_spinner_item);
+        ArrayAdapter<?> adapter = ArrayAdapter.createFromResource(this, R.array.DepartmentFind, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
@@ -328,7 +327,6 @@ public class DepartmentActivity extends AppCompatActivity {
                                 public void run() {
                                     ETId.setText(dep.getId().toString());
                                     arrayLength++;
-                                    //System.out.println(dep);
                                     currentRecord = arrayLength - 1;
                                     array.add(dep);
                                     setFieldsWithCurrentDepartment(currentRecord);
@@ -401,10 +399,10 @@ public class DepartmentActivity extends AppCompatActivity {
         }
     }
 
-    private void createToast(final String text) {
+    private void createToast(String text) {
         runOnUiThread(new Runnable() {
             public void run() {
-                final Toast toast = Toast.makeText(getApplicationContext(), text,  Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(getApplicationContext(), text,  Toast.LENGTH_LONG);
                 toast.show();
             }
         });

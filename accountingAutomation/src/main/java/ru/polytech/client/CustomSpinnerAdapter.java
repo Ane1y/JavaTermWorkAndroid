@@ -48,7 +48,8 @@ public class CustomSpinnerAdapter<T> extends ArrayAdapter<T> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        @SuppressLint("ViewHolder") View view =  View.inflate(mContext, R.layout.department_row, null);
+        @SuppressLint("ViewHolder") 
+		View view =  View.inflate(mContext, R.layout.department_row, null);
         TextView name = view.findViewById(R.id.TVDepartmentSpinnerRowName);
 
         name.setText(list.get(position).toString());
@@ -58,7 +59,8 @@ public class CustomSpinnerAdapter<T> extends ArrayAdapter<T> {
     @Override
     public View getDropDownView(int position, View convertView, ViewGroup parent) {
 
-        @SuppressLint("ViewHolder") View view =  View.inflate(mContext, R.layout.department_row, null);
+        @SuppressLint("ViewHolder") 
+		View view =  View.inflate(mContext, R.layout.department_row, null);
         TextView name = view.findViewById(R.id.TVDepartmentSpinnerRowName);
 
         name.setText(list.get(position).toString());

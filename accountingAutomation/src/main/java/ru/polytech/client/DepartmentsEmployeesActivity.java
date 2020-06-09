@@ -524,7 +524,7 @@ public class DepartmentsEmployeesActivity extends AppCompatActivity {
 
                         @Override
                         public void onFail(String message, int code) {
-                            handlerForBadRequest(code, "records"); //Adding failed
+                            handlerForBadRequest(code, "records");
                         }
                     };
 
@@ -542,7 +542,7 @@ public class DepartmentsEmployeesActivity extends AppCompatActivity {
 
             @Override
             public void onFail(String message, int code) {
-                handlerForBadRequest(code, "records"); //Adding failed
+                handlerForBadRequest(code, "records");
             }
         };
         handler.setUrlResource("departmentsEmployees/all");
@@ -567,7 +567,7 @@ public class DepartmentsEmployeesActivity extends AppCompatActivity {
 
             @Override
             public void onFail(String message, int code) {
-                handlerForBadRequest(code, "connection"); //Updating failed
+                handlerForBadRequest(code, "connection");
             }
         };
 
@@ -597,24 +597,20 @@ public class DepartmentsEmployeesActivity extends AppCompatActivity {
     }
 
     private void handlerForBadRequest(int code, String name) {
-        String mess;
+        String message;
         switch (code) {
             case HttpURLConnection.HTTP_NOT_FOUND: {
-                mess = "No such " + name + "!";
+                message = "No such " + name + "!";
                 break;
             }
             case HttpURLConnection.HTTP_FORBIDDEN: {
-                mess = "Your token has been expired! Try to sign in one more time";
+                message = "Your token has been expired! Try to sign in one more time";
                 break;
             }
-            /*case HttpURLConnection.HTTP_BAD_METHOD: {
-                mess = "You can't delete employee!";
-                break;
-            }*/
             default:
-                mess = "Connection failed or token has been expired! Try to sign in one more time";
+                message = "Connection failed or token has been expired! Try to sign in one more time";
         }
-        createToast(mess);
+        createToast(message);
     }
 
     private void clearFields() {
